@@ -32,6 +32,7 @@ class RedirectIfAuthenticated
             return redirect('/ngo');
         }
 
+
         return $next($request);
     }
 }

@@ -111,8 +111,15 @@ class RegisterController extends Controller
             // 'name' => 'required|string|max:255',
             'Email' => 'required|string|email|max:255|unique:company',
             'Password' => 'required|string|min:6|confirmed',
-            'Phone' => 'string|min:10|confirmed',
-            'Comname' => 'string|min:6|confirmed',
+            'Phone' => 'string|min:10',
+            'Comname' => 'string|min:6',
+            'Ngoname' => 'string|min:6',
+            'Address' => 'string|min:10',
+            'Regno' => 'string|min:10',
+            'Firstname' => 'string',
+            'Surname' => 'string',
+            'College' => 'string',
+
         ]);
     }
 

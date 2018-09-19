@@ -87,13 +87,13 @@ class LoginController extends Controller
     public function companyLogin(Request $request)
     {   
         $this->validate($request, [
-            'Email'   => 'required|email',
+            'Email'   => 'required|string|email',
             'Password' => 'required|min:6'
         ]);
         // return $validator->errors()->all();
-        
+       
 
-        if (Auth::guard('company')->attempt(['Email' => $request->email, 'Password' => $request->password], $request->get('remember'))) {
+        if (Auth::guard('company')->attempt(['Email' => $request->Email, 'Password' => $request->Password], $request->remember)) {
 
             return redirect()->intended('/company');
         }
